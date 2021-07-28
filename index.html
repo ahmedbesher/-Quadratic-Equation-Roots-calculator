@@ -2,8 +2,42 @@
 <html>
  <head>
     <link href="stlye.css" rel="stylesheet">
+    <script>
+       function validation(form){
+ var msg= "please, a can not be zero, kindly reneter a value" ;
+ var d= form.elements["a"].valueAsNumber;
+ var e= form.elements["b"].valueAsNumber;
+ var f= form.elements["c"].valueAsNumber;
+ var rootcalculator1,rootcalculator2;
+ var msg2=" invalid entry a must be  non-zero and between -99 and +99, reneter"+"<br>"+
+ " invalid entry b must be between -99 and +99, reneter"+"<br>"+
+ " invalid entry c must be between -99 and +99, reneter"+"<br>";
+ if (!(d==0&& d>99&&d<-99&& e>99 && e<99&& f<-99&& f>99)){  function calculation (form) {
+  if (e **2 < 4*d*f) { document.getElementById("solution").innerHTML ="Solution: x’s roots are imaginary"}
+   else if (e**2>*d*c) { 
+      rootcalculator1=((-e)+ Math.sqrt(e**2 -(4*d*f))/ (2*d) ;
+      rootcalculator2=(-e- Math.sqrt(e**2 -(4*d*f))/ (2*d);
+      document.getElementById("solution").innerHTML ="Solution:" x=rootcalculator1.valueAsNumber +
+       " the other root is:"x=rootcalculator2.valueAsNumber ;
+   }
+   else if (e**2==4*d*c) { 
+      rootcalculator1=(-e+ Math.sqrt(e**2 -4*d*f))/ (2*d) ;
+      document.getElementById("solution").innerHTML ="Solution:"+ x=rootcalculator1.valueAsNumber + " it is a single root";
+
+   }
+    
+ }
+ }
+ else if ( d==0|| d>99||d<-99||e>99||e<-99||f>99||f<-99) {
+   document.getElementById("solution").innerHTML = msg;
+ }
+ 
+</script>
  </head>
  <header>
+    <noscript>
+      <strong> please enable java script to see the content </strong>
+    </noscript>
     <h1> Quadratic Equation Roots calculator</h1>
  </header>
  <p>
@@ -18,6 +52,7 @@ b: <input type="number" min="-99" max="99" step="1" required id="b" >
 c: <input type="number" min="-99" max="99" step="1" required id="c" > <br>
 <br>
  <input type="button" value="calculate roots" id="roots" 
- onclick="calculation(this.form);">
+ onclick="validation(this.form);">
  </form>
+ <p id=" solution"></p>
 </html>
