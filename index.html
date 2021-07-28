@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <link href="stlye.css" rel="stylesheet">
+ </head>
+ <header>
+    <h1> Quadratic Equation Roots calculator</h1>
+ </header>
+ <p>
+     this equation finds the root of polynomial equation of the following form:- <br>
+     ax<sup>2</sup>+bx+c=0 <br>
+     <br>
+     a,b,c must be integer range between -99 and +99, and a <strong>must be non-zero</strong> 
+ </p>
+ <form>
+a: <input type="number" min="-99" max="99" step="1" required id="a" >
+b: <input type="number" min="-99" max="99" step="1" required id="b" >
+c: <input type="number" min="-99" max="99" step="1" required id="c" > <br>
+<br>
+ <input type="button" value="calculate roots" id="roots" 
+ onclick="calculation(this.form);">
+ </form>
+</html>
