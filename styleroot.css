@@ -1,0 +1,9 @@
+form { text-align: center;
+justify-content:center;}
+input:invalid {background-color: rgb(255, 220, 220);}
+input:valid {background-color:blue;}
+input { border: solid purple ;}
+alert { border-radius: 10%;
+width: 400px;
+height: 300px;
+text-align: right; }
