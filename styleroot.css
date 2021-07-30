@@ -8,11 +8,12 @@ background-attachment: fixed;
 background-position: center;
 }
 header{
-color: blue;}
+color: white;}
 input:invalid {background-color: rgb(255, 220, 220);}
 input:valid {background-color:blue;}
 input { border: solid purple ;}
 footer {margin-bottom:none;
-font-size: small;}
+font-size: small;
+color: white;}
 .bla {color: green;}
 
