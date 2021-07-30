@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <html>
  <head>
+    <link href="styleroot.css" rel="stylesheet">
     <script>
-       var A, B, C,X,x;
+   
+    function validation(form) {
+      
+      var A, B, C,X,x;
        A= form.elements["a"].valueAsNumber;
        B =form.elements["b"].valueAsNumber;
        C = form.elements["c"].valueAsNumber;
        var msg1;
        var root1,root2;
-       msg1= "ygbhnadsuhjnmdasu, mds<kunm ,ds<scjnz,m ";
-    function validation(form) {
-       
-      if (form.checkValidity() == false){
+     if (form.checkValidity() == false){
          alert("Invalid input.\nAs you enter values," +
-" green means valid input and red means invalid input.");
-      }
+" blue means valid input and purple means invalid input.");
+    }
 else if( form.checkValidity() == true) {
    if (a.valueAsNumber==0) { alert("a can not be zero");}
-   else { //our play will start here
-
+   else { 
+      if (Math.pow(b.value,2)<(4*a.value*c.value)) 
+      { document.getElementById("message").innerHTML="Solution: x’s roots are imaginary";}
+      else if (Math.pow(b.value,2)==(4*a.value*c.value)) {
+         root1= (-b.value+ (Math.sqrt((b.value**2)-(4*a.value*c.value))))/( 2*a.value);
+         document.getElementById("message").innerHTML="Solution: x’s single root="+ root1;
+      }
+      else if (Math.pow(b.value,2)>(4*a.value*c.value)){
+         root1= (-b.value+ (Math.sqrt((b.value**2)-(4*a.value*c.value))))/( 2*a.value);
+         root2= (-b.value - (Math.sqrt((b.value**2)-(4*a.value*c.value))))/( 2*a.value);
+         document.getElementById("message").innerHTML="Solution: x’s"+ root1.toFixed(1)+"the other root="+root2.toFixed(1);}
+      }
    }
 }
     
 
-}
+
     
 </script>
  </head>
@@ -48,7 +59,7 @@ c: <input type="number" min="-99" max="99" step="1" required id="c" > <br>
  <input type="button" value="calculate roots" 
  onclick="validation(this.form);">
 
- <p id="message" form= "myform"></p> 
+ <p id="message"></p> 
 </form>
  
    </body>
