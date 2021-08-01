@@ -1,8 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html id="back">
  <head>
     <link href="styleroot.css" rel="stylesheet">
     <script>
+   function changebackground() {
+      if(screen.width<800) {
+         document.getElementById("back").style.backgroundSize="150px 200px";
+
+            }
+   }
    
     function validation(form) {
       
@@ -19,6 +25,7 @@
 else if( form.checkValidity() == true) {
    if (a.valueAsNumber==0) { alert("a can not be zero");}
    else { 
+     
       if (Math.pow(b.value,2)<(4*a.value*c.value)) 
       { document.getElementById("message").innerHTML="Solution: x’s roots are imaginary";}
       else if (Math.pow(b.value,2)==(4*a.value*c.value)) {
@@ -29,6 +36,7 @@ else if( form.checkValidity() == true) {
          root1= (-b.value+ (Math.sqrt((b.value**2)-(4*a.value*c.value))))/( 2*a.value);
          root2= (-b.value - (Math.sqrt((b.value**2)-(4*a.value*c.value))))/( 2*a.value);
          document.getElementById("message").innerHTML="Solution: x’s"+ root1.toFixed(1)+"the other root="+root2.toFixed(1);}
+        
       }
    }
 }
@@ -45,8 +53,9 @@ else if( form.checkValidity() == true) {
     <header>
            <h1> Quadratic Equation Roots calculator</h1>
  </header>
- <body>
- <p>
+ <body onload="changebackground();"> 
+   
+  
      this equation finds the root of polynomial equation of the following form:- <br>
      ax<sup>2</sup>+bx+c=0 <br>
      <br>

@@ -7,8 +7,12 @@ background-size: cover ;
 background-attachment: fixed;
 background-position: center;
 }
+.smaller { 
+width:40;
+height: 500;}
 header{
-color: white;}
+color: white;
+text-align: center;}
 input:invalid {background-color: rgb(255, 220, 220);}
 input:valid {background-color:blue;}
 input { border: solid purple ;}
