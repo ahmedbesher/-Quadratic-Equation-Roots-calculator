@@ -5,7 +5,10 @@
     <script>
    function changebackground() {
       if(screen.width<800) {
-         document.getElementById("back").style.backgroundSize="150px 200px";
+         var screenwidth, screenheight;
+         screenwidth=screen.availWidth;
+         screenheight=screen.availHeight;
+         document.getElementById("back").style.backgroundSize="screenwidth.value screenheight.value";
 
             }
    }
